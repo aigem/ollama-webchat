@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 设置按钮 -->
+    <button class="settings-toggle" id="settings-toggle">⚙️</button>
+
+    <!-- 设置面板 -->
+    <div class="settings-panel" id="settings-panel">
+        <h2>设置</h2>
+        <div class="settings-section">
+            <h3>Ollama 服务设置</h3>
+            <input type="text" id="base-url" placeholder="Ollama Base URL" />
+        </div>
+        <div class="settings-section">
+            <h3>系统提示词</h3>
+            <textarea id="system-prompt" rows="4" placeholder="输入系统提示词..."></textarea>
+        </div>
+        <button id="save-settings">保存设置</button>
+        <h3>视频教程</h3>
+        <a href="https://www.bilibili.com/video/BV1S6PCeuE2z/" target="_blank">点击查看视频教程</a>
+    </div>
+
+    <div class="container">
+        <!-- 消息区域 -->
+        <div class="chat-container" id="chat-container">
+            <!-- Chat history will be dynamically inserted here -->
+        </div>
+
+        <!-- 输入区域 -->
+        <div class="input-area">
+            <div class="message-form" id="message-form">
+                <textarea id="message-input" rows="3" placeholder="输入消息..."></textarea>
+                <div class="button-container">
+                    <button id="submit">发送</button>
+                    <select id="models"></select>
+                </div>
+                <button id="clean">清空</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./utils/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
